@@ -1,5 +1,6 @@
 {
   "name": "pipeflux",
+  "type": "module",
   "version": "1.0.0",
   "description": "An elegant and type-safe implementation of the pipe operator.",
   "main": "src/pipes.js",
