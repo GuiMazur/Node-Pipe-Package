@@ -80,6 +80,6 @@ export declare class InterruptedPipe<T> implements IPipe<T> {
  * Creates a new pipe flux.
  *
  * @param {T} value the parameter to pass through the pipe.
- * @returns {Pipe<T>} the newly created pipe, with <value> running through it.
+ * @returns {Pipe<T>} the newly created pipe, with **value** running through it.
  */
 export declare const pipe: <T>(value: T) => Pipe<T>;

@@ -6,7 +6,7 @@
   "main": "src/pipes.js",
   "types": "src/pipes.d.ts",
   "scripts": {
-    "test": "npx ts-node ./tests/test.ts"
+    "test": "ts-node --esm ./tests/test.ts"
   },
   "keywords": [
     "pipe",
@@ -19,5 +19,8 @@
   "contributors": [
     "mrpedrobraga"
   ],
-  "license": "GPL-3.0-or-later"
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
 }

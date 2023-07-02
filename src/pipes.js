@@ -1,7 +1,6 @@
-const PIPE_INTERRUPTOR = Symbol("pipe_interruptor");
-exports.PIPE_INTERRUPTOR = PIPE_INTERRUPTOR;
+export const PIPE_INTERRUPTOR = Symbol("pipe_interruptor");
 
-class Pipe {
+export class Pipe {
   constructor(value) {
     this.value = value;
   }
@@ -23,9 +22,8 @@ class Pipe {
     return new Pipe(result);
   };
 }
-exports.Pipe = Pipe;
 
-class InterruptedPipe {
+export class InterruptedPipe {
   constructor(value) {
     this.value = value;
   }
@@ -36,9 +34,7 @@ class InterruptedPipe {
 
   eachTo = (_) => this;
 }
-exports.InterruptedPipe = InterruptedPipe;
 
-const pipe = (value) => {
+export const pipe = (value) => {
   return new Pipe(value);
 };
-exports.pipe = pipe;
