@@ -1,0 +1,19 @@
+{
+  "name": "pipechain",
+  "version": "1.0.0",
+  "description": "An elegant and type-safe implementation of the pipe operator.",
+  "main": "src/pipes.js",
+  "types": "src/pipes.d.ts",
+  "scripts": {
+    "test": "npx ts-node ./tests/test.ts"
+  },
+  "keywords": [
+    "pipe",
+    "operator",
+    "pipe",
+    "pipescript",
+    "elixir"
+  ],
+  "author": "guimazur & mrpedrobraga",
+  "license": "GPL-3.0-or-later"
+}
