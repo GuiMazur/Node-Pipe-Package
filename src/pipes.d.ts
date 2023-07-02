@@ -4,7 +4,7 @@
 export declare interface PipeInterruptor extends Symbol {}
 
 /**
- * @constant PIPE_INTERRUPTOR a value that can be returned from a *.to* callback to interrupt a pipe chain.
+ * @constant PIPE_INTERRUPTOR a value that can be returned from a *.to* callback to interrupt a pipe flow.
  */
 export declare const PIPE_INTERRUPTOR: PipeInterruptor;
 
@@ -13,21 +13,21 @@ export declare const PIPE_INTERRUPTOR: PipeInterruptor;
  */
 export declare interface IPipe<T> {
   /**
-   * @member {T} value The value contained at this point of the pipe chain.
+   * @member {T} value The value contained at this point of the pipe flow.
    */
   value: T;
 
   /**
-   * Adds a link to a pipe chain by passing the value in this pipe through a function.
+   * Adds a step to a pipe flow by passing the value in this pipe through a function.
    * @param {(prop: T) => E} callBack the function to pass the value through.
-   * @returns {InterruptedPipe<T> | Pipe<E>} a new link in the chain with the value returned from the callback function.
+   * @returns {InterruptedPipe<T> | Pipe<E>} a new step in the flow with the value returned from the callback function.
    */
   to: <E>(callBack: (value: T) => E) => InterruptedPipe<T> | Pipe<E>;
 
   /**
-   * Adds a link to a pipe chain by passing each item of *value* (given that *value* is an array) through a function.
+   * Adds a step to a pipe flow by passing each item of *value* (given that *value* is an array) through a function.
    * @param {(prop: T) => E} callBack the function to pass the array entries through.
-   * @returns {InterruptedPipe<T> | Pipe<E>} a new link in the chain with the transformed array.
+   * @returns {InterruptedPipe<T> | Pipe<E>} a new step in the flow with the transformed array.
    */
   eachTo: <U, E>(
     callback: (value: U) => E
@@ -77,7 +77,7 @@ export declare class InterruptedPipe<T> implements IPipe<T> {
 }
 
 /**
- * Creates a new pipe chain.
+ * Creates a new pipe flow.
  *
  * @param {T} value the parameter to pass through the pipe.
  * @returns {Pipe<T>} the newly created pipe, with <value> running through it.

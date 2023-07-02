@@ -29,13 +29,13 @@ This library implements this using the `pipe` global function.
 pipe(2).to(double).to(stringify).to(uppercase).value; //faucet, lol
 ```
 
-This pipe implementation allows for the pipe chain to be interrupted midway, and has some handy methods for dealing with Arrays, too.
+This pipe implementation allows for the pipe flow to be interrupted midway, and has some handy methods for dealing with Arrays, too.
 
 ## Install
 
-Depending on your package manager your install command may differ... but the package's name is `pipechain`.
+Depending on your package manager your install command may differ... but the package's name is `pipeflow`.
 
 ```bash
-npm install pipechain
-yarn add pipechain
+npm install pipeflow
+yarn add pipeflow
 ```
