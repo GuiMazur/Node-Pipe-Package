@@ -1,7 +1,7 @@
 {
   "name": "pipeflux",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An elegant and type-safe implementation of the pipe operator.",
   "main": "src/pipes.js",
   "types": "src/pipes.d.ts",
