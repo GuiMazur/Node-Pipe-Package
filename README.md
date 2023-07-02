@@ -1,4 +1,4 @@
-# pipechain
+# pipeflux
 
 An elegant and type-safe implementation of the pipe operator.
 
@@ -33,9 +33,9 @@ This pipe implementation allows for the pipe flow to be interrupted midway, and 
 
 ## Install
 
-Depending on your package manager your install command may differ... but the package's name is `pipeflow`.
+Depending on your package manager your install command may differ... but the package's name is `pipeflux`.
 
 ```bash
-npm install pipeflow
-yarn add pipeflow
+npm install pipeflux
+yarn add pipeflux
 ```
